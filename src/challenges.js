@@ -59,25 +59,27 @@ function multiplyBy(array, num) {
 
 
 // Iteration 4 | Filter Out
-const original = ["cat", "dog", "fish", "bird", "cat", "fish"];
-const toRemove = ["cat", "dog"];
+let word="";
+const newArray=arrayString;
 
-function filterOut(arrayString, arrayFilter) {
-
-  if(arrayString.length==0){
-    return null;
-  }
-
-  for (let i=0; i< arrayFilter.length;i++){
-    
-    for(let j=0; j<arrayString.length;j++){
-      if (arrayFilter[i]==arrayString[j]){
-          arrayString.splice(j, 1);
-          }
-    }
-  };
-  return arrayString;
+if(arrayString.length==0){
+  return null;
 }
+
+for (let i=0; i< newArray.length; i++){
+  
+    if (newArray.includes(newArray[i])){
+      word = newArray[i];
+      console.log(word);
+          
+      for(let j=i+1; j<newArray.length;j++){
+        if(word == newArray[j]){
+          newArray.splice(j, 1);
+        }
+      }
+    }
+}
+return newArray;
 
 
 
@@ -99,25 +101,26 @@ const duplicateWords = [
 
 function uniquifyArray(arrayString) {
   let word="";
+  const newArray=arrayString;
 
-  if(arrayString.length==0){
+  if(newArray.length==0){
     return null;
   }
   
-  for (let i=0; i< arrayString.length; i++){
+  for (let i=0; i< newArray.length; i++){
     
-      if (arrayString.includes(arrayString[i])){
-        word = arrayString[i];
+      if (newArray.includes(newArray[i])){
+        word = newArray[i];
         console.log(word);
             
-        for(let j=i+1; j<arrayString.length;j++){
-          if(word == arrayString[j]){
-            arrayString.splice(j, 1);
+        for(let j=i+1; j<newArray.length;j++){
+          if(word == newArray[j]){
+            newArray.splice(j, 1);
           }
         }
       }
   }
-  return arrayString;
+  return newArray;
 
 }
 
